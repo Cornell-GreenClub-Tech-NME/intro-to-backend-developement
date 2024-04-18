@@ -82,7 +82,7 @@ def transfer():
     Endpoint for initiating a transfer
     """
 
-@app.route("api/transactions/", methods=["PUT"])
+@app.route("/api/transactions/", methods=["PUT"])
 def accept_transfer():
     """
     Endpoint for accepting a transfer
