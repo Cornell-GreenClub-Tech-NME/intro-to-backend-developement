@@ -4,7 +4,7 @@ db = SQLAlchemy()
 
 class User(db.Model):
     """
-    Course Model
+    User Model
     """
     __tablename__ = "user"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -24,7 +24,7 @@ class User(db.Model):
 
     def serialize(self):
         """
-        Serialize a Course object
+        Serialize a User object
         """
         return {
             "id": self.id,
@@ -37,12 +37,6 @@ class User(db.Model):
 class Transaction(db.Model):
     """
     Transaction Model
-        - required fields:
-            - id (primary key)
-            - amount (float)
-            - sender id (foreign key)
-            - receiver id (foreign key)
-            - pending (boolean)
     """
     __tablename__ = "transaction"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
