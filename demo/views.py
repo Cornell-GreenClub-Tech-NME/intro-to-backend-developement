@@ -13,10 +13,10 @@ def user_route(request):
         serializer = UserSerializer(users, many=True)
         return JsonResponse(serializer.data, safe=False)
     if request.method == 'POST':
-        # TODO: Implement this
+        # TODO: Implement creating a new user
         pass
     
 @csrf_exempt
 def transaction_route(request):
-    # TODO: Implement this
+    # TODO: EXTRA CREDIT: Get all of a user's transactions
     pass
