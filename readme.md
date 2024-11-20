@@ -12,11 +12,15 @@ $ source ./venv/bin/activate
 ```
 This is how you activate the virtual environment. Now that you have it activated, we can install the requirements.
 ```
-$ pip install -r src/requirements.txt
+$ pip install -r requirements.txt
+```
+Next, let's do some setup to make sure our app runs properly.
+```
+$ python manage.py migrate
 ```
 
-Next, try running the app using ```python manage.py runserver```.
-You should be able to go to localhost:8000 using a web browser or Postman and see some error output there. To stop the app from running, you can use ```CTRL+C```.
+Finally, try running the app using ```python manage.py runserver```.
+You should be able to go to localhost:8000 using a web browser or Postman and see some output there. To stop the app from running, you can use ```CTRL+C```.
 
 ## TODO
 
