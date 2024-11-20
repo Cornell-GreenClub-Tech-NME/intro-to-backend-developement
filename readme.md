@@ -15,7 +15,7 @@ This is how you activate the virtual environment. Now that you have it activated
 $ pip install -r src/requirements.txt
 ```
 
-Next, try running the app using ```python app.py```.
+Next, try running the app using ```python manage.py runserver```.
 You should be able to go to localhost:8000 using a web browser or Postman and see some error output there. To stop the app from running, you can use ```CTRL+C```.
 
 ## TODO
