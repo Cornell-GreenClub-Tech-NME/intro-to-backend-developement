@@ -11,7 +11,7 @@ class User(db.Model):
     name = db.Column(db.String, nullable=False)
     username = db.Column(db.String, nullable=False)
     balance = db.Column(db.Float, nullable=True)
-    transactions = db.relationship("Transaction", cascade="delete")
+    # TODO: Create relationship to Transaction model
 
     def __init__(self, **kwargs):
         """
@@ -34,24 +34,4 @@ class User(db.Model):
             "transactions": [transaction.serialize() for transaction in self.transactions]
         }
     
-class Transaction(db.Model):
-    """
-    Transaction Model
-    """
-    __tablename__ = "transaction"
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-
-    def __init__(self, **kwargs):
-        """
-        Initialize a Transaction object
-        """
-
-
-    def serialize(self):
-        """
-        Serialize a Transaction object
-        """
-
-        return {
-            "id": self.id,
-        }
+# TODO: Create Transaction Model
