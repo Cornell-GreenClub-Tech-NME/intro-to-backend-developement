@@ -17,7 +17,7 @@ Required Fields:
 The get all users route has been provided as an example. Please complete the following routes.
 
 ### Create user
-``` POST /api/users/```
+``` POST /users/```
 #### Request
 ```json
 {
@@ -31,7 +31,7 @@ The get all users route has been provided as an example. Please complete the fol
 ```json
 <HTTP STATUS CODE 201>
 {
-    "id": <ID>
+    "id": <ID>,
     "name": "Raahi Menon",
     "username": "raahi014",
     "balance": <USER INPUT, OR 0 IF NOT PROVIDED>,
@@ -40,21 +40,54 @@ The get all users route has been provided as an example. Please complete the fol
 ```
 
 ### Get user by ID
-``` GET /api/users/{id}/```
+``` GET /users/<int:id>/```
 
 #### Response
 ```json
-HTTP STATUS CODE 200>
+<HTTP STATUS CODE 200>
 {
     "id": <ID>,
-    "name": <STORED NAME FOR USER WITH ID {id}>,
-    "username": <STORED USERNAME FOR USER WITH ID {id}>,
-    "balance": <STORED BALANCE FOR USER WITH ID {id}>,
-    "transactions": [
-        <TRANSACTION>,
-        <TRANSACTION>,
-        ...
+    "name": "Raahi Menon",
+    "username": "raahi014",
+    "balance": <USER INPUT, OR 0 IF NOT PROVIDED>,
+    "transactions": []
+}
+```
+
+### Get all Transactions
+``` GET /transactions/```
+
+#### Response
+```json
+<HTTP STATUS CODE 200>
+{
+    transactions: [
+        {
+            "id": <ID>,
+            "sender": "Larry Tao",
+            "receiver": "Elizabeth Moon",
+            "amount": 10.0,
+            "date": "3/21/2025",
+            "description": "test"
+        }
     ]
+}
+```
+
+### Create Transaction
+``` POST /transactions/create/```
+
+#### Response
+```json
+<HTTP STATUS CODE 201>
+
+{
+    "id": <ID>,
+    "sender": "Larry Tao",
+    "receiver": "Elizabeth Moon",
+    "amount": 10.0,
+    "date": "3/21/2025",
+    "description": "test"
 }
 ```
 

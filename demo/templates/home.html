@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to the Transaction System</h1>
+        <p class="lead">This system helps you manage users and their transactions.</p>
+        <hr class="my-4">
+        <p>Use the navigation above to browse users or transactions.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'users' %}" role="button">View Users</a>
+    </div>
+</div>
+{% endblock %}
