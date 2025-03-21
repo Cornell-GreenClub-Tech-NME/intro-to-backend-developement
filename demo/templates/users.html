@@ -43,7 +43,6 @@
                         <th>Name</th>
                         <th>Username</th>
                         <th>Balance</th>
-                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -53,9 +52,6 @@
                         <td>{{ user.name }}</td>
                         <td>{{ user.username }}</td>
                         <td>${{ user.balance }}</td>
-                        <td>
-                            <a href="{% url 'get_user' user.id %}" class="btn btn-sm btn-info">View</a>
-                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>

@@ -13,44 +13,17 @@ def home(request):
 @csrf_exempt
 def user_route(request):
     if request.method == 'GET':
-        users = User.objects.all()
-        return render(request, 'users.html', {'users': users})
+        # TODO: Demo of get all users
+        pass
         
     if request.method == 'POST':
-        # Form submission handling
-        name = request.POST.get('name')
-        username = request.POST.get('username')
-        balance = request.POST.get('balance')
-
-        if not name or not username or balance is None:
-            return render(request, 'users.html', {
-                'users': User.objects.all(),
-                'error': 'Missing required fields'
-            })
-        
-        try:
-            balance = float(balance)
-            user = User.objects.create(name=name, username=username, balance=balance)
-            return redirect('users')
-        except ValueError:
-            return render(request, 'users.html', {
-                'users': User.objects.all(),
-                'error': 'Invalid balance value'
-            })
-    
-@csrf_exempt
-def get_user_by_id(request, id):
-    if request.method == 'GET':
-        user = get_object_or_404(User, id=id)
-        other_users = User.objects.exclude(id=id)
-        return render(request, 'user_detail.html', {'user': user, 'users': other_users})
+        # TODO: Create a new user
+        pass
 
 @csrf_exempt
 def transaction_route(request):
-    # Show all transactions and a form to create a new one
-    transactions = Transaction.objects.all().order_by('-date')
-    users = User.objects.all()
-    return render(request, 'transactions.html', {'transactions': transactions, 'users': users})
+    # TODO: Display all transactions
+    pass
 
 @csrf_exempt
 def create_transaction(request):

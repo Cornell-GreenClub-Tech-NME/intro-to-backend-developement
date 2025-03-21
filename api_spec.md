@@ -39,21 +39,6 @@ The get all users route has been provided as an example. Please complete the fol
 }
 ```
 
-### Get user by ID
-``` GET /users/<int:id>/```
-
-#### Response
-```json
-<HTTP STATUS CODE 200>
-{
-    "id": <ID>,
-    "name": "Raahi Menon",
-    "username": "raahi014",
-    "balance": <USER INPUT, OR 0 IF NOT PROVIDED>,
-    "transactions": []
-}
-```
-
 ### Get all Transactions
 ``` GET /transactions/```
 
@@ -71,23 +56,6 @@ The get all users route has been provided as an example. Please complete the fol
             "description": "test"
         }
     ]
-}
-```
-
-### Create Transaction
-``` POST /transactions/create/```
-
-#### Response
-```json
-<HTTP STATUS CODE 201>
-
-{
-    "id": <ID>,
-    "sender": "Larry Tao",
-    "receiver": "Elizabeth Moon",
-    "amount": 10.0,
-    "date": "3/21/2025",
-    "description": "test"
 }
 ```
 

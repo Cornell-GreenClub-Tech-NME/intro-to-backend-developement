@@ -4,12 +4,6 @@ from .models import User
 from .models import Transaction
 
 class UserSerializer(serializers.ModelSerializer):
-    # specify model and fields
-    class Meta:
-        model = User
-        fields = ['id', 'name', 'username', 'balance']
+    # TODO: Demo Add serializer for users
 
-class TransactionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Transaction
-        fields = ['id', 'sender', 'receiver', 'amount', 'date', 'description']
+# TODO: Add serializer for transactions

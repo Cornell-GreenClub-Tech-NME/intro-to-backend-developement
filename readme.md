@@ -28,14 +28,13 @@ Your task is to create a model for Transactions, as well as 2 new routes for the
 
 Create User
 
-Get User By ID
+Get All Transactions
 
 
 Please complete those following the specifications, which can be found at ``` ./api_spec.md```.
 
 ## TODOs - Week 2
-Create endpoints for creating new transactions and for getting all previous transactions (more detail in ```./api_spec.md```)
-
 
 Create a "Transactions" page where you can create a transaction between users. This should follow a similar format to the Users page, with a submission form as well as a list that displays all previous transactions. 
 
+Update your Get All Transactions endpoint to display your new Transactions page.
